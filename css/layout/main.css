@@ -1,0 +1,14 @@
+main {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr 8fr 1fr;
+  background-color: var(--bg-color-main);
+  padding: 2rem;
+}
+
+.main-container {
+  grid-column: 2 / 3;
+  padding: 1rem;
+  overflow-y: auto;
+  height: 100%;
+}

@@ -1,0 +1,22 @@
+header {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 8fr 1fr;
+
+  background-color: var(--bg-color-light);
+  text-align: center;
+  box-shadow: var(--box-shadow);
+
+  font-family: 'Playwrite AT', cursive;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+header h1 {
+  grid-column: 2 / 3;
+  font-family: 'Playwrite AT', cursive;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
