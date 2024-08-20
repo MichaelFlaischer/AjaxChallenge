@@ -1,0 +1,42 @@
+@import url('input.css');
+@import url('dialog.css');
+@import url('notification.css');
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 10px;
+  grid-auto-flow: dense;
+}
+
+.image-container img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.image-container img:hover {
+  transform: scale(1.1);
+}
+
+.image-container p {
+  font-size: x-large;
+  text-align: center;
+}
+
+.keyword-section {
+  margin-bottom: 20px;
+}
+
+.keyword {
+  display: inline-block;
+  margin: 5px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.keyword:hover {
+  transform: scale(1.1);
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AJAX Challenge</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/menu-bar.css" />
+  </head>
+  <body onload="onInit()">
+    <!-- <script src="js/global/i18n.js"></script> -->
+    <script src="js/global/utils.js"></script>
+    <script src="js/global/localStorage.js"></script>
+    <script src="js/services/index.services.js"></script>
+    <script src="js/controller/menu-bar.controller.js"></script>
+    <header>
+      <h1 data-i18n="welcomeMessage">Welcome to AJAX Challenge</h1>
+      <!-- <select onchange="changeLanguage(this.value)" class="language-toggle" data-i18n="languageToggle"></select> -->
+    </header>
+    <nav></nav>
+    <main>
+      <div class="main-container">
+        <section class="hero">
+          <div class="video-container"></div>
+          <div class="hero-content">
+            <h2 data-i18n="heroContent">Master the Power of AJAX with Our Challenges</h2>
+            <p data-i18n="heroText">
+              Dive into a series of challenges designed to enhance your skills in AJAX, API integration, and dynamic web development. Explore and conquer each
+              task to become a true AJAX master!
+            </p>
+          </div>
+        </section>
+      </div>
+    </main>
+    <footer>
+      <p>&copy; Michael Flaischer</p>
+    </footer>
+  </body>
+</html>
