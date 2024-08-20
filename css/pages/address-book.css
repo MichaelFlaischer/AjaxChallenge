@@ -12,8 +12,6 @@
 @import url('../layout/menu-bar.css');
 
 /* Importing components styles */
-@import url('../components/button.css');
 @import url('../components/dialog.css');
 @import url('../components/image-container.css');
-@import url('../components/notification.css');
 @import url('../components/gallery.css');
