@@ -1,16 +1,43 @@
 'use strict'
 
-function renderGallery() {
+function loadImagesAndRenderGallery(aliensList) {
+  showLoader()
+
+  const imagesToLoad = aliensList.length
+  let imagesLoaded = 0
+
+  aliensList.forEach((alien) => {
+    const img = new Image()
+    img.src = alien.image
+
+    img.onload = () => {
+      imagesLoaded++
+      if (imagesLoaded === imagesToLoad) {
+        hideLoader()
+        renderGallery(aliensList)
+      }
+    }
+
+    img.onerror = () => {
+      console.error(`Failed to load image: ${alien.image}`)
+      imagesLoaded++
+      if (imagesLoaded === imagesToLoad) {
+        hideLoader()
+        renderGallery(aliensList)
+      }
+    }
+  })
+}
+
+function renderGallery(aliensList) {
   const gallery = document.querySelector('.gallery')
 
-  let aliens = getAliens()
-
-  aliens.forEach((alien) => {
+  aliensList.forEach((alien) => {
     gallery.innerHTML += `
-      <div class="image-container">
-        <p>${alien.fname + ' ' + alien.lname}</p>
-        <img src="${alien.image}" alt="${alien.fname + ' ' + alien.lname}" onclick="openShowModal('${alien.id}')" />
-      </div>`
+        <div class="image-container">
+          <p>${alien.fname + ' ' + alien.lname}</p>
+          <img src="${alien.image}" alt="${alien.fname + ' ' + alien.lname}" onclick="openShowModal('${alien.id}')" />
+        </div>`
   })
 }
 
@@ -57,5 +84,20 @@ function closeDialog(event = null) {
   if (event === null || event.key === 'Escape') {
     const elDialog = document.querySelector('.dialog')
     elDialog.style.display = 'none'
+  }
+}
+
+function showLoader() {
+  const gallery = document.querySelector('.gallery')
+  gallery.innerHTML = `
+      <div class="loader-container">
+        <img src="img/loader.svg" alt="Loading..." class="loader-img" />
+      </div>`
+}
+
+function hideLoader() {
+  const loaderContainer = document.querySelector('.loader-container')
+  if (loaderContainer) {
+    loaderContainer.remove()
   }
 }

@@ -36,7 +36,7 @@ function setAliens(aliensList) {
 
 function getAliensList(aliensList) {
   setAliens(initAliensIds(aliensList))
-  renderGallery()
+  loadImagesAndRenderGallery(getAliens())
 }
 
 function initAliensIds(aliensList) {
