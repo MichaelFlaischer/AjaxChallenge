@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title data-i18n="addressBookTitle">AJAX Challenge - Address Book</title>
+    <link rel="stylesheet" href="css/pages/index.css" />
+  </head>
+  <body onload="onInit()">
+    <!-- <script src="js/global/i18n.js"></script> -->
+    <script src="js/global/utils.js"></script>
+    <script src="js/controller/menu-bar.controller.js"></script>
+    <script src="js/controller/address-book.controller.js"></script>
+    <script src="js/services/address-book.services.js"></script>
+    <header>
+      <h1 data-i18n="welcomeMessage">Welcome to the Address Book Challenge</h1>
+      <!-- <select onchange="changeLanguage(this.value)" class="language-toggle" data-i18n="languageToggle"></select> -->
+    </header>
+    <nav></nav>
+    <main>
+      <div class="main-container">
+        <section class="about">
+          <h2 data-i18n="aboutHeader-addressBook">My Address Book Challenge with XMLHttpRequest</h2>
+          <p data-i18n="aboutText-addressBook">
+            In this section of the AJAX Challenge, I created a dynamic address book. The task was to fetch and display contact information using
+            `XMLHttpRequest`. I implemented this by making raw AJAX requests to retrieve data from a server and then dynamically rendering that data on the
+            page. This approach allowed me to enhance my understanding of handling asynchronous data fetching and manipulating the DOM to display the fetched
+            information efficiently.
+          </p>
+        </section>
+      </div>
+    </main>
+    <footer>
+      <p>&copy; Michael Flaischer</p>
+    </footer>
+  </body>
+</html>
