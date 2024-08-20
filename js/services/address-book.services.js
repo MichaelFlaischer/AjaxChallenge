@@ -6,6 +6,7 @@ function onInit() {
   menuRender()
 
   getAns(getAliensList)
+  addEscapeListener()
 }
 
 function getAns(cb) {
@@ -35,14 +36,22 @@ function setAliens(aliensList) {
 
 function getAliensList(aliensList) {
   setAliens(initAliensIds(aliensList))
-  console.log(getAliens())
+  renderGallery()
 }
 
 function initAliensIds(aliensList) {
   aliensList.map((alien) => {
     alien['id'] = generateUniqueId()
-    alien['image'] = `https://robohash.org/${alien['id']}?set=set5`
+    alien['image'] = `https://robohash.org/${alien['id']}?set=set1`
   })
 
   return aliensList
+}
+
+function addEscapeListener() {
+  document.addEventListener('keydown', function (event) {
+    if (event.key === 'Escape') {
+      closeDialog()
+    }
+  })
 }
