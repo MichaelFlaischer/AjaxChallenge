@@ -35,7 +35,7 @@ function renderGallery(aliensList) {
   aliensList.forEach((alien) => {
     gallery.innerHTML += `
         <div class="image-container">
-          <p>${alien.fname + ' ' + alien.lname}</p>
+          <p data-i18n="alienName">${alien.fname + ' ' + alien.lname}</p>
           <img src="${alien.image}" alt="${alien.fname + ' ' + alien.lname}" onclick="openShowModal('${alien.id}')" />
         </div>`
   })
@@ -48,29 +48,29 @@ function openShowModal(id) {
 
   document.querySelector('.dialog').innerHTML = `
     <div class="dialog-content">
-      <span class="close" onclick="closeDialog()">&times;</span>
+      <span class="close" onclick="closeDialog()" data-i18n="close">&times;</span>
       <img class="dialog-img" src="${alien.image}" alt="${alien.fname + ' ' + alien.lname}" />
       <div class="dialog-info">
-        <h2>${alien.fname + ' ' + alien.lname}</h2>
+        <h2 data-i18n="alienFullName">${alien.fname + ' ' + alien.lname}</h2>
         <table>
           <tr>
-            <td>Phone</td>
+            <td data-i18n="phone">Phone</td>
             <td>${alien.tel}</td>
           </tr>
           <tr>
-            <td>Address</td>
+            <td data-i18n="address">Address</td>
             <td>${alien.address}</td>
           </tr>
           <tr>
-            <td>City</td>
+            <td data-i18n="city">City</td>
             <td>${alien.city}</td>
           </tr>
           <tr>
-            <td>State</td>
+            <td data-i18n="state">State</td>
             <td>${alien.state}</td>
           </tr>
           <tr>
-            <td>ZIP</td>
+            <td data-i18n="zip">ZIP</td>
             <td>${alien.zip}</td>
           </tr>
         </table>
@@ -91,7 +91,7 @@ function showLoader() {
   const gallery = document.querySelector('.gallery')
   gallery.innerHTML = `
       <div class="loader-container">
-        <img src="img/loader.svg" alt="Loading..." class="loader-img" />
+        <img src="img/loader.svg" alt="Loading..." class="loader-img" data-i18n="loading" />
       </div>`
 }
 
