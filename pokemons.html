@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title data-i18n="pokemonTitle">AJAX Challenge - Pokémon Gallery</title>
+    <link rel="stylesheet" href="css/pages/pokemons.css" />
+  </head>
+  <body onload="onInit()">
+    <script src="js/global/utils.js"></script>
+    <script src="js/controller/menu-bar.controller.js"></script>
+    <script src="js/controller/pokemons.controller.js"></script>
+    <script src="js/services/pokemons.services.js"></script>
+    <header>
+      <h1 data-i18n="welcomeMessage">Welcome to the Pokémon Gallery Challenge</h1>
+    </header>
+    <nav></nav>
+    <main>
+      <div class="main-container">
+        <section class="about">
+          <h2 data-i18n="aboutHeader-pokemons">Implementing a Dynamic Pokémon Gallery</h2>
+          <p data-i18n="aboutText-pokemons">
+            In this part of the AJAX Challenge, I built a dynamic Pokémon gallery that fetches and displays Pokémon information using
+            <code>XMLHttpRequest</code>. The process involves loading Pokémon data from the server and displaying it dynamically on the page. Additionally, I
+            implemented an image loading mechanism that ensures all images are fully loaded before rendering the gallery, providing a smooth user experience. A
+            loading indicator is displayed during the image loading process.
+          </p>
+        </section>
+        <section class="pokemons gallery" data-i18n="gallerySection"></section>
+      </div>
+    </main>
+    <footer>
+      <p>&copy; <span data-i18n="footerText">Michael Flaischer</span></p>
+    </footer>
+    <div class="dialog" style="display: none" data-i18n="dialogSection"></div>
+  </body>
+</html>

@@ -44,11 +44,6 @@ function showMoviesGallery(genreId) {
   document.querySelector('#movie-header').scrollIntoView({ behavior: 'smooth' })
 }
 
-function showModal(generId, movieId) {
-  console.log(generId)
-  console.log(movieId)
-}
-
 function openShowModal(genreId, movieId) {
   const savedGenreData = localStorage.getItem(`genre_${genreId}`)
 
@@ -73,19 +68,4 @@ function openShowModal(genreId, movieId) {
     </div>`
 
   document.querySelector('.dialog').style.display = 'flex'
-}
-
-function closeDialog(event = null) {
-  if (event === null || event.key === 'Escape') {
-    const elDialog = document.querySelector('.dialog')
-    elDialog.style.display = 'none'
-  }
-}
-
-function addEscapeListener() {
-  document.addEventListener('keydown', function (event) {
-    if (event.key === 'Escape') {
-      closeDialog()
-    }
-  })
 }
