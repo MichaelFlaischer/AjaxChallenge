@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title data-i18n="askAnythingTitle">Ask Anything - Yes/No</title>
+    <link rel="stylesheet" href="css/pages/yes-no.css" />
+  </head>
+  <body onload="onInit()">
+    <script src="js/global/utils.js"></script>
+    <script src="js/controller/menu-bar.controller.js"></script>
+    <script src="js/controller/yes-no.controller.js"></script>
+    <script src="js/services/yes-no.services.js"></script>
+    <script src="lib/jquery-3.7.1.js"></script>
+    <header>
+      <h1 data-i18n="askAnythingHeader">ASK ANYTHING - Yes/No</h1>
+    </header>
+    <nav></nav>
+    <main>
+      <div class="main-container"></div>
+      <section class="ask-anything">
+        <input type="text" class="user-question" placeholder="Your Question" data-i18n="questionPlaceholder" />
+      </section>
+      <section class="response-section"></section>
+    </main>
+    <footer>
+      <p>&copy; <span data-i18n="footerText">Michael Flaischer</span></p>
+    </footer>
+  </body>
+</html>
