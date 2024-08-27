@@ -1,0 +1,18 @@
+/* Importing basics styles */
+@import url('basics/base.css');
+
+/* Importing setup styles */
+@import url('setup/vars.css');
+@import url('setup/fonts.css');
+@import url('setup/mq.css');
+@import url('setup/poniter.css');
+
+/* Importing layout styles */
+@import url('layout/header.css');
+@import url('layout/main.css');
+@import url('layout/footer.css');
+@import url('layout/menu-bar.css');
+
+/* Importing components styles */
+@import url('cmps/input.css');
+@import url('cmps/main-container-border-flexbox.css');
