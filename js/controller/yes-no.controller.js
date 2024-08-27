@@ -1,7 +1,5 @@
 'use strict'
 
-let answersToLoad = 2
-let count = 0
 let currentAnswer = null
 let currentExtraInfo = null
 
@@ -14,7 +12,6 @@ function onInit() {
 
 function displayAnswer(answer) {
   currentAnswer = answer
-  const elResponseSection = document.querySelector('.response')
   const img = new Image()
 
   img.src = answer.image

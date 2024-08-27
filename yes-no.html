@@ -17,12 +17,13 @@
     </header>
     <nav></nav>
     <main>
-      <div class="main-container"></div>
-      <section class="ask-anything">
-        <input type="text" class="user-question" placeholder="Your Question" data-i18n="questionPlaceholder" />
-      </section>
-      <section class="response"></section>
-      <section class="extra-info"></section>
+      <div class="main-container">
+        <section class="ask-anything">
+          <input type="text" class="user-question" placeholder="Your Question" data-i18n="questionPlaceholder" pattern=".{3,}\?$" required />
+        </section>
+        <section class="response"></section>
+        <section class="extra-info"></section>
+      </div>
     </main>
     <footer>
       <p>&copy; <span data-i18n="footerText">Michael Flaischer</span></p>

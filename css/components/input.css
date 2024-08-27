@@ -32,3 +32,10 @@
 input[type='file'] {
   margin-bottom: 10px;
 }
+
+input:invalid {
+  background-color: red;
+}
+input:valid {
+  background-color: lightgreen;
+}

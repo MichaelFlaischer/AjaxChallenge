@@ -1,5 +1,8 @@
 'use strict'
 
+let answersToLoad = 2
+let count = 0
+
 function handleQuestion(event) {
   const question = event.target.value
   if (question.length >= 3 && question.endsWith('?')) {
