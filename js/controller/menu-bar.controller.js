@@ -32,7 +32,7 @@ function menuRender() {
           <ul>
             <li><a href="index.html" data-i18n="home">Home</a></li>
             <li><a href="address-book.html" data-i18n="address-book">Address book</a></li>
-            <li><a href="#" data-i18n="yesNoQuestions">Yes/No Questions</a></li>
+            <li><a href="yes-no.html" data-i18n="yesNoQuestions">Yes/No Questions</a></li>
             <li><a href="#" data-i18n="moviesGenres">Movies Genres</a></li>
             <li><a href="#" data-i18n="pokemonsList">Pokémons List</a></li>
           </ul>

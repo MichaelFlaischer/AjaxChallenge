@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title data-i18n="moviesTitle">AJAX Challenge - Movie Genres</title>
+    <link rel="stylesheet" href="css/pages/movies.css" />
+  </head>
+  <body onload="onInit()">
+    <script src="js/global/utils.js"></script>
+    <script src="js/controller/menu-bar.controller.js"></script>
+    <script src="js/controller/movies.controller.js"></script>
+    <script src="js/services/movies.services.js"></script>
+    <header>
+      <h1 data-i18n="welcomeGenresMessage">Welcome to the Movie Genres Challenge</h1>
+    </header>
+    <nav></nav>
+    <main>
+      <div class="main-container">
+        <section class="about">
+          <h2 data-i18n="aboutHeader-movies">Implementing a Movie Genres and Details Viewer</h2>
+          <p data-i18n="aboutText-movies">
+            In this part of the AJAX Challenge, I built a dynamic movie genre viewer that fetches and displays genres using
+            <code>XMLHttpRequest</code>. When a genre is selected, the application fetches and displays corresponding movie details, including the title,
+            overview, and an image. The images are loaded according to the guidelines provided by The Movie Database (TMDb) API to ensure a smooth user
+            experience. To avoid exceeding the API's call limits, data is cached locally in the browser.
+          </p>
+        </section>
+        <section class="genres gallery" data-i18n="genresSection"></section>
+        <section class="movies" data-i18n="moviesSection"></section>
+      </div>
+    </main>
+    <footer>
+      <p>&copy; <span data-i18n="footerText">Michael Flaischer</span></p>
+    </footer>
+    <div class="dialog" style="display: none" data-i18n="dialogSection"></div>
+  </body>
+</html>
