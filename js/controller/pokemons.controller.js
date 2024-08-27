@@ -16,11 +16,9 @@ function renderPokemons(pokemons) {
       const elPokemonContainer = document.createElement('div')
       elPokemonContainer.className = 'image-container'
       elPokemonContainer.innerHTML = `
-              <div class = "image-container">${pokemonName}
         <p>${pokemonName}</p>
         <p>Weight: ${pokemonWeight}</p>
         <img id="sprite-${pokemonName}" src="${spriteImages[0]}" alt="${pokemonName}" onclick="downloadPokemonCSV(${pokemonId}, '${pokemonName}')" />
-      </div>
         `
       elPokemons.appendChild(elPokemonContainer)
 
