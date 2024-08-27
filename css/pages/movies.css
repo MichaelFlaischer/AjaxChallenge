@@ -1,0 +1,17 @@
+/* Importing global styles */
+@import url('../global/vars.css');
+@import url('../global/reset.css');
+@import url('../global/fonts.css');
+@import url('../global/mq.css');
+@import url('../global/poniter.css');
+
+/* Importing layout styles */
+@import url('../layout/header.css');
+@import url('../layout/main.css');
+@import url('../layout/footer.css');
+@import url('../layout/menu-bar.css');
+
+/* Importing components styles */
+@import url('../components/dialog.css');
+@import url('../components/image-container.css');
+@import url('../components/gallery.css');

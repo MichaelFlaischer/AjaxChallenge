@@ -16,6 +16,7 @@
 .image-container img {
   width: 100%;
   height: auto;
+  max-height: 200px;
   border-radius: 10px;
   cursor: pointer;
   transition: transform 0.2s ease;
