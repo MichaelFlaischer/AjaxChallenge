@@ -18,8 +18,23 @@
     <nav></nav>
     <main>
       <div class="main-container">
+        <section class="about">
+          <h2 data-i18n="aboutHeader-yesNo">Ask Yes/No Questions</h2>
+          <p data-i18n="aboutText-yesNo">
+            In this application, you can ask any Yes/No question and get an answer along with a visual response. If the answer is "Yes", you will receive a
+            joke. If the answer is "No", you will get a random dog image. Just type your question in the input field below and press Enter.
+          </p>
+        </section>
         <section class="ask-anything">
-          <input type="text" class="user-question" placeholder="Your Question" data-i18n="questionPlaceholder" pattern=".{3,}\?$" required />
+          <input
+            type="text"
+            class="user-question"
+            placeholder="Your Question"
+            data-i18n="questionPlaceholder"
+            pattern=".{3,}\?$"
+            title="Please enter a non-empty question with at least 3 characters ending with a question mark."
+            required
+          />
         </section>
         <section class="response"></section>
         <section class="extra-info"></section>
