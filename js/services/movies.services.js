@@ -3,6 +3,7 @@
 function onInit() {
   menuRender()
   loadGenres()
+  addEscapeListener()
 }
 
 function loadGenres() {
@@ -70,4 +71,18 @@ function getGenreImage(genreId, cb) {
       cb(randomImageUrl)
     })
   }
+}
+function closeDialog(event = null) {
+  if (event === null || event.key === 'Escape') {
+    const elDialog = document.querySelector('.dialog')
+    elDialog.style.display = 'none'
+  }
+}
+
+function addEscapeListener() {
+  document.addEventListener('keydown', function (event) {
+    if (event.key === 'Escape') {
+      closeDialog()
+    }
+  })
 }
